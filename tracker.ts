@@ -2,7 +2,6 @@ interface tracker {
     track(event: string, ...tags: string[]): void
 }
 
-
 ((global) => {
     const buffer: BufferEntry[] = [];
     let delay = 0;
@@ -23,7 +22,7 @@ interface tracker {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Request-Method': 'POST',
+                    'Access-Control-Request-Method': 'POST', // чтобы при CORS запросе не происходил префлайт OPTIONS запрос
                 },
                 body: JSON.stringify(data)
             });

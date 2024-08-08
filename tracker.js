@@ -22,7 +22,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Request-Method': 'POST',
+                        'Access-Control-Request-Method': 'POST', // чтобы при CORS запросе не происходил префлайт OPTIONS запрос
                     },
                     body: JSON.stringify(data)
                 });

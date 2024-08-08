@@ -1,12 +1,6 @@
-// interface Tracker {
-//     track(event: string, ...tags: string[]): void
-//  }
-
 ((global) => {
     const buffer = [];
     let delay = 0;
-
-    // const bufferEvent = new Event('buffer-sent');
 
     async function sendBuffer(reason) {
         if (buffer.length === 0) return true;
@@ -15,7 +9,7 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Request-Method': 'POST',
+                'Access-Control-Request-Method': 'POST', // чтобы при CORS запросе не происходил префлайт OPTIONS запрос
             },
             body: JSON.stringify(data)
         });
