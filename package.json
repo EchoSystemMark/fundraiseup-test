@@ -1,0 +1,21 @@
+{
+    "name": "fundraiseup",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "build": "npx tsc index.ts tracker.ts --target ES6 --allowSyntheticDefaultImports --moduleResolution nodenext --module nodenext"
+    },
+    "author": "Mark Muravev",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.19.2",
+        "mongodb": "^6.8.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^22.1.0",
+        "typescript": "^5.5.4"
+    }
+}
